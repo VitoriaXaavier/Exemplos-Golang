@@ -3,6 +3,7 @@ package ex3
 import "fmt"
 
 func MaximoDivisor (x, y int)  int {
+	
 	fmt.Println("Algoritimo para calcular o máximo divisor comum entre dois números inteiros!")
 
 	println("Entre com o primeiro número")
