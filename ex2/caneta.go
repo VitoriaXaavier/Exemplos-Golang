@@ -18,7 +18,7 @@ func Caneta (valorPago, troco float64, canetasCompradas int) float64 {
 	var valorDeCadaCaneta = (valorPago - troco) / nConvertido
 
 	if valorPago > troco && canetasCompradas > 0 && valorPago > 0 && troco >= 0 {
-		fmt.Printf("O valor unitário da caneta é de %g ",valorDeCadaCaneta, "\n")
+		fmt.Println("O valor unitário da caneta é de  ",valorDeCadaCaneta)
 		}else {
 			fmt.Println("Valores inválidos")
 		}
