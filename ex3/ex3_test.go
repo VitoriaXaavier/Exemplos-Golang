@@ -1,20 +1,23 @@
 package ex3
 
-import "testing"
+import (
+	"testing"
 
-func Testdivisor (t testing.T) {
+	"github.com/stretchr/testify/assert"
+)
 
-	divisor := MaximoDivisor(18,15)
+func TestDivisor(t *testing.T) {
 
-	if divisor != 3 {
-		t.Error("Erro no teste")
-	}
+	x := 18
+	y := 15
+	divisor := MaximoDivisor(x, y)
+	divisorEsperado := 3
 
-	divisor2 := MaximoDivisor(20,30)
+	assert.Equal(t, divisor, divisorEsperado)
 
-	if divisor2 != 10 {
-		t.Error("Erro no teste 2")
-	}
+	divisor2 := MaximoDivisor(20, 30)
+	divisorEsperado = 10
 
+	assert.Equal(t, divisor2, divisorEsperado)
 
 }
