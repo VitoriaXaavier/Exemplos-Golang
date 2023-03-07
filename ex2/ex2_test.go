@@ -1,18 +1,22 @@
 package ex2
 
-import "testing"
+import (
+	"testing"
 
-func TestCaneta ( t * testing.T) {
+	"github.com/stretchr/testify/assert"
+)
+
+func TestCaneta(t *testing.T) {
+
+	caneta := Caneta(10, 5, 4)
+	canetaEsperada := 1.25
+
+	// compara se os valores são iguais
 	
-	caneta := Caneta(10,5,4)
+	assert.Equal(t, caneta, canetaEsperada)
 
-	if caneta != 1.25 {
-		t.Error("Erro no teste")
-	}
+	caneta2 := Caneta(100, 4, 6)
+	canetaEsperada = 16
 
-	caneta2 := Caneta(100,4,6)
-
-	if caneta2 != 16 {
-		t.Error("Erro no teste 2")
-	}
+	assert.Equal(t, caneta2, canetaEsperada)
 }
