@@ -2,18 +2,19 @@ package ex1
 
 import (
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestArea(t *testing.T) {
 
 	area := Area(20, 10)
-	if area != 100 {
-	t.Error("Erro no teste")
-	}
+	areaEsperada := 100
 
-	area2 := Area(2,4)
-	if area2 != 4 {
-		t.Error("Erro no teste 2")
-	}
+	assert.Equal(t, area, areaEsperada)
+
+	area2 := Area(2, 4)
+	areaEsperada = 4
+
+	assert.Equal(t, area2, areaEsperada)
 }
-
